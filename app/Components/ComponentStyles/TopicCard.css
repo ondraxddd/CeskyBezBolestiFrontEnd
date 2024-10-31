@@ -1,0 +1,68 @@
+#topicHeadline{
+    font-size: 4vw;
+}
+
+#excHeadline{
+    font-size: 2vw;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    margin-top: 7px;
+    font-size: 1.2rem;
+}
+
+#iytopic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100vw;
+}
+
+#topicCardCtg{
+    position: relative;
+    border: black solid 2px;
+    border-radius: 7px;
+    width: 80vw;
+    padding: 2vw;
+    margin-bottom: 50px;
+}
+
+#ucebnice {
+    background-color: #FFA115;
+    position: absolute;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    bottom: 30px; /* Umístění odspodu */
+    right: 30px; /* Umístění zprava */
+}
+
+#ucebnice:hover{
+    cursor: pointer;
+}
+
+#ucebniceImg{
+    max-width: 1.3rem;
+    max-height: 1.3rem;
+}
+
+
+@media only screen and (max-width: 400px){
+    .topicCard{
+        width: 90vw;
+    }
+}

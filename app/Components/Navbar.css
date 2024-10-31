@@ -1,0 +1,44 @@
+nav {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    margin-top: 15px;
+    height: 1.5rem;
+}
+
+nav a {
+    margin-left: 25px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #343434;
+}
+
+#navLeft {
+    float: left;
+}
+
+#navRight {
+    float: right;
+    margin-right: 25px;
+}
+
+#navRight a {
+    color: #FFA115;
+    font-weight: bold;
+    background-color: transparent;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width: 401px) and (max-width: 900px) {
+
+    nav a {
+        font-size: 4vw;
+        margin-left: 2vw;
+    }
+
+    #navRight a{
+        font-size: 4vw;
+    }
+}

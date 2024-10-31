@@ -1,0 +1,20 @@
+export const Urls = {
+    server:"https://localhost:7184",
+    "getuser":"/getuser",
+    "login":"/api/Auth/login",
+    "register":"/api/Auth/register",
+    "getallcategories":"/api/General/getcategories",
+    "getsubjects":"/api/General/getsubjects",
+    "getallsubjects":"/api/General/getallsubjects",
+    "getsubcategorydetails":"/api/General/getsubcategorydetails",
+    "getquestionsset": "/api/Questions/getset",
+    "recordmistake":"/api/Questions/recordmistake",
+    "savesesiontime":"/api/UserStats/savesesiontime",
+    "getuserstats":"/api/UserStats/getuserstats",
+    "checkifadmin":"/checkifadmin",
+    "addquestion":"/api/Questions/addquestion",
+    "addcategory":"/api/Questions/addcategory",
+    "addsubcategory":"/api/Questions/addsubcategory",
+    "getctyrletymix":"/api/Questions/getfouryearmix",
+    "reportmix":"/api/Questions/reportmixresult"
+}

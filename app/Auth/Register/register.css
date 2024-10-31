@@ -1,0 +1,96 @@
+body{
+    overflow-y: hidden;
+}
+
+#content{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#frame{
+    width: 70vw;
+    height: 80vh;
+    margin-top: -50px;
+    border: #FFA115 solid 5px;
+    border-radius: 12px;
+    display: flex;
+}
+
+#image{
+    width: 70%;
+    height: 100%;
+}
+
+#form{
+    width: 30%;
+    height: 100%;
+    background-color: #DFDFEA;
+    border-left: #FFA115 4px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form input{
+    background-color: #F9F8F8;
+    color: #6F6D6D;
+    border: 0;
+    border-radius: 10px;
+    width: 18vw;
+    height: 5vh;
+    margin-top: 10px;
+    padding-left: 10px;
+    
+}
+
+#form .credentials{
+    width: 8.5vw;
+}
+
+#btn{
+    background-color: #FFA115;
+    width: 8vw;
+    height: 5vh;
+    border: 0;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+p{
+    cursor: pointer;
+}
+
+#form p{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.8vw;
+    text-align: right;
+}
+
+h3{
+    font-size: 0.8vw;
+    color: red;
+    margin-top: 0;
+    display: none;
+}
+
+
+@media only screen and (max-width: 850px){
+    nav{
+        visibility: hidden;
+    }
+
+    #image{
+        visibility: hidden;
+    }
+
+    #form{
+        width: 1000vw;
+    }
+}

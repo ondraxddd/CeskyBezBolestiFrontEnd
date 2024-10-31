@@ -1,0 +1,25 @@
+#shouldRemember{
+    background-color: #D0D0E6;
+    width: 34vw;
+    height: 17vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#shouldRememberH1{
+    font-size: 1vw;
+}
+
+#toRememberItem{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    gap: 30%;
+}
+
+#toRememberItemH2{
+    margin: 0;
+    display: inline;
+}

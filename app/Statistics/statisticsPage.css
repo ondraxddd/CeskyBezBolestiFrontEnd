@@ -1,0 +1,42 @@
+/* #statisticsPage{
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+    width: 100vw;
+    background-color: black;
+} */
+
+#statisticsPage{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+#statsDetails{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    gap: 1vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#statsRow{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100vw;
+}
+
+#statisticsPageh1{
+    font-size: 3rem;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+  }

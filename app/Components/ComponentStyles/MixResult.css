@@ -1,0 +1,41 @@
+#mixResultFreshHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #cacad5; 
+    border-bottom: 2px solid #ccc; 
+    width: 100%;
+}
+
+#mixResultFreshHeader p {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+#mixResultFreshDiv {
+    width: 100%; /* Ujistíme se, že kontejner zabírá celou šířku */
+}
+
+#mixResultFreshContent {
+    display: flex;
+    flex-direction: column; /* Uspořádá obsah tabulky do sloupců */
+}
+
+#answerRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Oddělovací čára mezi řádky */
+    align-items: center;
+    border-bottom: rgb(184, 184, 184) solid 1px;
+}
+
+#answerRow p {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+

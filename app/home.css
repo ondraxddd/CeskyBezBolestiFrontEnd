@@ -1,0 +1,308 @@
+/* HEROPAGE */
+#heroPage {
+    width: 100vw;
+    height: 85vh;
+    /* background-color: red; */
+    display: flex;
+
+}
+
+#mainText {
+    width: 60vw;
+    height: 85vh;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Zarovnání vertikálně na střed */
+    justify-content: center;
+    /* Zarovnání horizontálně na střed */
+}
+
+#mainText h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 6vw;
+    color: #343434;
+    margin: 0;
+    line-height: 1.3;
+}
+
+#mainText span {
+    color: #FFA115;
+    margin: 0;
+}
+
+#mainText p {
+    font-family: 'Baloo Bhai 2';
+    font-size: 2.3vw;
+    font-weight: 600;
+    color: #343434;
+    margin: 0;
+    line-height: 1;
+}
+
+#mainText button {
+    background-color: #FFA115;
+    color: #343434;
+    height: 8vh;
+    width: 15vw;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+#mainText button a {
+    color: #343434;
+    text-decoration: none;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+#mainImage {
+    width: 40vw;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imageBackground {
+    background-color: #E1E1F3;
+    width: 70%;
+    height: 80%;
+    margin-right: 10%;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imageBackground img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+#mainPros p {
+    line-height: 1;
+    margin: 2px;
+    font-family: 'Inter';
+}
+
+#mainPros span {
+    font-size: 0.9rem;
+}
+
+#ctgSelect {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+#ctgSelect h1 {
+    font-family: 'Baloo Bhai 2';
+    font-size: 4rem;
+    font-weight: 600;
+    color: #343434;
+}
+
+#cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #cards a{
+    color: #343434;
+    text-decoration: none;
+} */
+
+
+
+
+#prijMix {
+    margin-top: 200px;
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#prijMix h1 {
+    font-family: 'Baloo Bhai 2';
+    font-size: 4rem;
+    font-weight: 600;
+    color: #343434;
+    margin: 0;
+}
+
+#prijMix p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#prijMix span {
+    text-decoration: underline #FFA115;
+}
+
+#prijMix button {
+    width: 220px;
+    height: 70px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background-color: transparent;
+    border: #FFA115 3px solid;
+    border-radius: 10px;
+}
+
+#prijMix button a{
+        text-decoration: none;
+        color: #343434;
+}
+@media only screen and (max-width: 400px) {
+
+    /* NAV */
+    #navLeft {
+        display: none;
+        /* Skryjeme levou část navigace na malých obrazovkách */
+    }
+
+    #navRight {
+        text-align: right;
+    }
+
+    #navRight a {
+        font-size: 4vw;
+        margin: 0;
+    }
+
+    /* hero page */
+    #mainText {
+        width: 100%;
+    }
+
+    #mainText h1 {
+        font-size: 10vw;
+        /* Velikost písma na mobilních zařízeních */
+    }
+
+    #mainText p {
+        font-size: 4.5vw;
+        /* Velikost písma na mobilních zařízeních */
+        max-width: none;
+    }
+
+    #mainText button {
+        font-size: 5vw;
+        /* Velikost písma na mobilních zařízeních */
+        width: 50vw;
+        height: 6vh;
+    }
+
+    #mainText button a{
+        font-size: 3.5vw;
+    }
+
+    #mainImage {
+        display: none;
+    }
+
+    #cards {
+        flex-direction: column;
+        /* Karty budou pod sebou na malých obrazovkách */
+        height: 200vh;
+    }
+
+    .card {
+        width: 80vw;
+        /* Karty budou zabírat většinu šířky obrazovky na malých obrazovkách */
+        height: 50vh;
+    }
+
+    #ctgSelect {
+        height: 200vh;
+    }
+
+    #ctgSelect h1 {
+        font-size: 8vw;
+        /* Velikost písma pro nadpis na malých obrazovkách */
+    }
+
+    #cards .card h1 {
+        font-size: 7vw;
+        /* Velikost písma pro názvy karet na malých obrazovkách */
+    }
+
+    #cards p {
+        font-size: 3vw;
+        margin-left: 5vw;
+    }
+
+    .card ul li {
+        font-size: 3vw;
+        /* Velikost písma pro počet cvičení a seznam na malých obrazovkách */
+        margin-left: 0;
+        /* Odstraníme levé odsazení */
+    }
+
+    #prijMix h1 {
+        font-size: 7vw;
+    }
+
+    #prijMix p {
+        font-size: 5vw;
+        margin-top: 1vh;
+    }
+
+    #prijMix button {
+        width: 40vw;
+        height: 50vh;
+        font-size: 5vw;
+    }
+
+}
+
+
+@media only screen and (min-width: 401px) and (max-width: 900px){
+    
+    #mainImage {
+        display: none;
+        width: 0;
+    }
+
+    #mainText{
+        width: 100vw;
+    }
+
+    #mainText h1{
+        font-size: 10vw;
+    }
+
+    #mainText p{
+        font-size: 4vw;
+    }
+
+    #mainText button{
+        height: fit-content;
+        width: 20vw;
+    }
+
+    #mainText button a{
+        font-size: 2vw;
+    }
+
+    #prijMix h1{
+        font-size: 8vw;
+    }
+}

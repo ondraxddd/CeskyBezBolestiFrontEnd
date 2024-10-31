@@ -1,0 +1,66 @@
+.topicCard{
+    width: 25vw;
+    height: 70vh;
+    background-color: #e0e0ec;
+    border: #FFA115 4px solid;
+    border-radius: 20px;
+    margin: 3vw;
+}
+
+.topicCard a {
+    text-decoration: none;
+    color: #343434;
+}
+
+.topicCard:hover{
+    cursor: pointer;
+}
+
+#cards .topicCard h1{
+    font-size: 4vw;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+
+.exCount{
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+    color: #666680;
+}
+
+
+.topicCard ul li{
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+@media only screen and (max-width: 400px){
+
+   .topicCard{
+    width: 70vw;
+    height: 70vh;
+   }
+
+   #cards .topicCard h1{
+    font-size: 12vw;
+   }
+
+   .topicCard ul li{
+    font-size: 4vw;
+   }
+
+}
+
+@media only screen and (min-width: 401px) and (max-width: 900px){
+    
+    .topicCard ul li{
+        font-size: 2vw;
+    }
+}

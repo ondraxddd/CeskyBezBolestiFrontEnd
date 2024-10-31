@@ -1,0 +1,19 @@
+#bestAndWorstCard{
+    width: 34vw;
+    height: 17vw;
+    background-color: #D0D0E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.bestAndWorstP{
+    margin: 0;
+}
+
+.bestAndWorstH1{
+    margin: 0;
+}
