@@ -1,0 +1,45 @@
+#mixReportHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #cacad5; 
+    border-bottom: 2px solid #ccc; 
+    width: 100%;
+}
+
+#mixReportHeader p {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+#mixReportDiv {
+    width: 100%; /* Ujistíme se, že kontejner zabírá celou šířku */
+}
+
+#mixReportFreshContent {
+    display: flex;
+    flex-direction: column; /* Uspořádá obsah tabulky do sloupců */
+}
+
+#reportRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Oddělovací čára mezi řádky */
+    align-items: center;
+    border-bottom: rgb(184, 184, 184) solid 1px;
+}
+
+#reportRow :hover{
+    cursor: pointer;
+}
+
+#reportRow p {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+

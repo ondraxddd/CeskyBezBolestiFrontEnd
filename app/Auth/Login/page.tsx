@@ -121,6 +121,7 @@ export default function Login() {
                             <input type="password" onChange={e => { setPassword(e.currentTarget.value) }} style={{ border: borderColorPassword }} placeholder="Heslo" /><br />
                         </form>
                         <Link href="/Auth/Register">Ještě nemáte učet? Zaregistrujte se.</Link>
+                        <Link href="/requestpasswordreset">Zapomněl jsem heslo</Link>
                         <h3 id='warning'>Někde se stala chyba. Zkuste to později. Děkujeme.</h3>
                         <button id="btn" onClick={handleButtonClick}>Přihlásit se</button>
                     </div>

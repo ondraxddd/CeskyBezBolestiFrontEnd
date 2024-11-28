@@ -17,6 +17,7 @@ export default function Ctyrletymix() {
     else {
         return (
             <>
+             <a href="/mixesoverview">Výsledky ostatních pokusů</a>
                 <ClickerMix></ClickerMix>
             </>
         )

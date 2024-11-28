@@ -2,6 +2,7 @@ export const Urls = {
     server:"https://localhost:7184",
     "getuser":"/getuser",
     "login":"/api/Auth/login",
+    "logout":"/api/Auth/logout",
     "register":"/api/Auth/register",
     "getallcategories":"/api/General/getcategories",
     "getsubjects":"/api/General/getsubjects",
@@ -16,5 +17,9 @@ export const Urls = {
     "addcategory":"/api/Questions/addcategory",
     "addsubcategory":"/api/Questions/addsubcategory",
     "getctyrletymix":"/api/Questions/getfouryearmix",
-    "reportmix":"/api/Questions/reportmixresult"
+    "reportmix":"/api/Questions/reportmixresult",
+    "getmixesreport":"/api/Mix/getallmixes",
+    "getreportdetails":"/api/Mix/getreport",
+    "resetpassword":"/api/Auth/resetpassword",
+    "updatepassword":"/api/Auth/updatepassword"
 }

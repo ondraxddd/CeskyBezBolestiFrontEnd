@@ -7,6 +7,8 @@ import { useState } from 'react';
 import { getCookie } from '../GeneralFunctions';
 import { Urls } from '../Contexts/UrlsExport';
 import UsernameWidget from './UsernameWidget';
+import {  Dropdown,  DropdownTrigger,  DropdownMenu,  DropdownSection,  DropdownItem} from "@nextui-org/dropdown";
+import { Button } from '@nextui-org/button';
 
 function Navbar() {
   const [username, setUsername] = useState("Přihlásit se")

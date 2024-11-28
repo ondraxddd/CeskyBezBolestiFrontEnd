@@ -135,7 +135,7 @@ export default function ClickerMixComponent() {
             <div id="ClickerMixComplete">
                 <h2>Došel si až na konec!</h2>
                 <h1>Tvoje úspěšnost: {correctAnswersCount}/{answers.length}</h1>
-                <a href="">Výsledky ostatních pokusů</a>
+                <a href="/mixesoverview">Výsledky ostatních pokusů</a>
                 <MixResultFresh answers={answers}></MixResultFresh>
             </div>
         )
