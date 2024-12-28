@@ -11,7 +11,7 @@ function UsernameWidget({ username }: Props) {
 
   return (
     <nav>
-      <Dropdown>
+      <Dropdown id="dropdown-username">
         <DropdownTrigger>
           <Button
             variant="solid"
@@ -22,9 +22,9 @@ function UsernameWidget({ username }: Props) {
           </Button>
         </DropdownTrigger>
         <DropdownMenu aria-label="Static Actions">
-          <DropdownItem href="/Statistics">Statistiky</DropdownItem>
-          <DropdownItem href="https://youtube.com">Nastavení</DropdownItem>
-          <DropdownItem key="edit" onClick={()=>{
+          <DropdownItem className="dropdownItemNextUI" href="/Statistics"><p>Statistiky</p></DropdownItem> 
+          <DropdownItem className="dropdownItemNextUI" href="https://youtube.com"><p>Nastavení</p></DropdownItem>
+          <DropdownItem className="dropdownItemNextUI" href="/" onClick={()=>{
             fetch(Urls.server + Urls.logout,
               {
                 headers: {
@@ -34,10 +34,7 @@ function UsernameWidget({ username }: Props) {
             }
             )
             window.location.reload()
-          }}>Odhlásit se</DropdownItem>
-          <DropdownItem key="delete" className="text-danger" color="danger">
-            Delete file
-          </DropdownItem>
+          }}><p>Odhlásit se</p></DropdownItem>
         </DropdownMenu>
       </Dropdown>
       {/* <Link href="/">{username}</Link> */}

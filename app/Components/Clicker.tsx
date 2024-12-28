@@ -54,7 +54,9 @@ export default function ClickerComponent({ subCategory }: Props) {
         randomNumber = Math.round(Math.random())
         setMistakeReported(false)
         // check if there is enough questions in row
-        if (questions.length < 3) LoadQuestions()
+        if (questions.length < 3){
+            LoadQuestions()
+        }
         // remove first element
         removeQuestion()
     }

@@ -7,6 +7,7 @@ export const Urls = {
     "getallcategories":"/api/General/getcategories",
     "getsubjects":"/api/General/getsubjects",
     "getallsubjects":"/api/General/getallsubjects",
+    "getallquestions":"/api/Questions/getallquestions",
     "getsubcategorydetails":"/api/General/getsubcategorydetails",
     "getquestionsset": "/api/Questions/getset",
     "recordmistake":"/api/Questions/recordmistake",
@@ -21,5 +22,6 @@ export const Urls = {
     "getmixesreport":"/api/Mix/getallmixes",
     "getreportdetails":"/api/Mix/getreport",
     "resetpassword":"/api/Auth/resetpassword",
-    "updatepassword":"/api/Auth/updatepassword"
+    "updatepassword":"/api/Auth/updatepassword",
+    "removequestion":"/api/Questions/removequestion"
 }

@@ -6,3 +6,20 @@
     border: none;
     cursor: pointer;
 }
+
+.dropdownItemNextUI {
+    color: #343434;
+    text-decoration: none;
+}
+
+.dropdownItemNextUI p{
+    margin: 5px;
+}
+
+#dropdown-username{
+    background-color: #aeaec0;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
