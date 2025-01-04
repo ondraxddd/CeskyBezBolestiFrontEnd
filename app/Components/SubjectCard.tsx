@@ -13,7 +13,7 @@ function SubjectCard({subject }: Props) {
         <div className="topicCard">
             <Link href={"subject/"+ link +"/"+subject.Id}>
                 <h1>{subject.Title}</h1>
-                <p className="exCount">1098 cvičení zdarma a 98 prémiových</p>
+                <p className="exCount">{subject.FreeQuestionsCount} cvičení zdarma a {subject.PaidQuestionsCount} prémiových</p>
                 <ul>
                     {subject.Categories.map((category:Category)=><li key={category.Id}>{category.Title}</li>)}
                 </ul>

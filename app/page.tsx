@@ -27,6 +27,8 @@ export interface Subject {
     Id: number;
     Title: string;
     Categories: Category[];
+    FreeQuestionsCount: number;
+    PaidQuestionsCount: number;
 }
 
 export const removeDiacriticsAndSpaces = (text: string): string => {
@@ -44,7 +46,6 @@ export default function Home() {
     //let allSubjects: Subject[] = []
 
     const DownloadSubjects = () => {
-        // Provedení HTTP požadavku a zpracování odpovědi
     fetch(Urls.server + Urls.getallsubjects, {
         method: 'GET',
         headers: {
@@ -102,43 +103,6 @@ export default function Home() {
                    </SubjectCard>
                    )}
 
-                    {/* <div className="topicCard">
-                        <Link href="procvicovani/gramatika/vyber">
-                            <h1>Gramatika</h1>
-                            <p className="exCount">1098 cvičení zdarma a 98 prémiových</p>
-                            <ul>
-                                <li>Psaní I/Y</li>
-                                <li>Velká písmena</li>
-                                <li>Číslovky</li>
-                                <li>Stavba slova</li>
-                                <li>Psaní ě/je</li>
-                                <li>Psaní ú/ů</li>
-                            </ul>
-                        </Link>
-                    </div>
-
-
-
-                    <div className="topicCard" style={{ border: '4px solid black' }}>
-                        <h1>Práce s textem</h1>
-                        <p className="exCount">850 cvičení zdarma a 28 prémiových</p>
-                        <ul>
-                            <li>Porozumění textu</li>
-                            <li>Rozponání větných členů</li>
-                            <li>Rozpoznání vět</li>
-                            <li>Podnět, přísudek a přívlastek</li>
-                            <li>Slovní druhy</li>
-                        </ul>
-                    </div>
-
-                    <div className="topicCard">
-                        <h1>Slovní zásoba</h1>
-                        <p className="exCount">980 cvičení zdarma a 14 prémiových</p>
-                        <ul>
-                            <li>Literární definice</li>
-                            <li>Lidová pořekladla</li>
-                        </ul>
-                    </div> */}
                 </div>
             </div>
 

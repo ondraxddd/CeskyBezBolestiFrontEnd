@@ -9,6 +9,7 @@ export default function Home() {
     const [allSubjects, setAllSubjects] = useState<Subject[]>([])
     const [selectedSubjectId, setSelectedSubjectId] = useState<number|null>(null)
     const [selectedCategoryId, setSelectedCategoryId] = useState<number|null>(null)
+    const [selectedSubCategoryId, setSelectedSubCategoryId] = useState<number|null>(null)
     const [statusText, setStatusText] = useState<string>("")
     const [question, setQuestion] = useState<string>("")
     const [correctAnswer, setCorrectAnswer] = useState<string>("")
@@ -68,6 +69,10 @@ export default function Home() {
 
     const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedCategoryId(Number(event.target.value))
+    }
+
+    const handleSubCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedSubCategoryId(Number(event.target.value))
     }
 
     const handleNewCategorySubmit = async () => {
@@ -155,7 +160,7 @@ export default function Home() {
         }
 
         const payload = {
-            subCatgId: selectedCategoryId,
+            subCatgId: selectedSubCategoryId,
             questText: question,
             answers: [correctAnswer, wrongAnswer] // Správná odpověď je vždy na prvním místě
         }
@@ -225,7 +230,7 @@ export default function Home() {
                 )}
             </select>
 
-            <select name="SubcategorySelect" id="subcategoryselect">
+            <select name="SubcategorySelect" id="subcategoryselect" onChange={handleSubCategoryChange}>
                 <option value={0}>-- Vyber podkategorii --</option>
                 {selectedCategory && selectedCategory.SubCatgs ? (
                     selectedCategory.SubCatgs.map((subCatg: SubCategory) => (
@@ -279,6 +284,7 @@ export default function Home() {
                 onChange={(e) => setWrongAnswer(e.target.value)}
             />
             <button onClick={handleQuestionSubmit}>Přidat otázku</button>
+            <button onClick={()=>console.log(selectedSubCategoryId)}>Log subcatg id</button>
            
 
         </>

@@ -1,3 +1,7 @@
+#clicker::-webkit-scrollbar {
+    display: none;
+  }
+
 #clicker{
     display: flex;
     flex-direction: column;    
@@ -8,21 +12,37 @@
     justify-content: center;
     align-items: center;
     border-radius: 25px;
+    min-width: 30vw;
+    max-width: 70vw;
+    z-index: 0;
+    overflow-y: scroll;
 }
 
 #clickerQuestion{
-    font-size: 5rem;
+    /* font-size: 5rem; */
+    font-size: calc(1em+1vw);
+    height: 90%;
+    overflow-y: auto;
+}
+
+#answers{
+    display: flex;
+    justify-content: space-between;
 }
 
 #answerBtn{
-    width: 16rem;
+    /* width: 16rem; */
+    flex-grow: 1;
     height: 4rem;
     margin: 0 10px;
     padding: 10px;
-    background-color: #F9F9FF;
+    background-color: #e9e9ed;
     border-radius: 100px;
     border: 0;
-    font-size: 2rem;
+    font-size: calc(1em+1vw);
+    font-weight: bold;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 #answerBtn:hover{

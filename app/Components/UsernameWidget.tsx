@@ -10,7 +10,7 @@ interface Props {
 function UsernameWidget({ username }: Props) {
 
   return (
-    <nav>
+    <div>
       <Dropdown id="dropdown-username">
         <DropdownTrigger>
           <Button
@@ -38,7 +38,7 @@ function UsernameWidget({ username }: Props) {
         </DropdownMenu>
       </Dropdown>
       {/* <Link href="/">{username}</Link> */}
-    </nav>
+    </div>
   );
 };
 
