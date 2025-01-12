@@ -8,6 +8,7 @@ import { useContext, useEffect, useState } from 'react';
 import SubjectCard from './Components/SubjectCard'
 import { FullSubjectsContext } from './Contexts/FullSubjects'
 import { normalize } from 'path'
+import { UserContext } from './Contexts/UserContext'
 
 export interface SubCategory {
     Id: number;
@@ -71,7 +72,7 @@ export default function Home() {
     }
 
     useEffect(()=>{DownloadSubjects()}, [])
-
+    const user = useContext(UserContext)
     return (
         <div>
             <div id="heroPage">
@@ -113,6 +114,7 @@ export default function Home() {
                     se necháš často napálit.</p>
                 <button><a href="ctyrletymix">Přijímačkový Mix</a></button>
             </div>
+            <button onClick={()=>console.log("User context", user)}>Log user context</button>
         </div>
     )
 }
