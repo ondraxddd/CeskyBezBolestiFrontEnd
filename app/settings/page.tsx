@@ -8,10 +8,15 @@ export default function Settings() {
     console.log("Prvotní načtení, user je: ", user)
     const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false)
 
-    useEffect(()=>{
-        console.log("Ted se username změnil, user je ", user)
-    },[user?.username])
-    
+    useEffect(() => {
+        if (user?.username) {
+          setIsLoggedIn(true)
+          console.log("Ted se username změnil, user je ", user?.username)
+        } else {
+          setIsLoggedIn(false)
+        }
+      }, [user?.username])
+      
     if(isLoggedIn == false){
         return(<><h1>User must be logged in first.</h1>
             <button onClick={()=>console.log("User context", user)}>Log user context</button>
