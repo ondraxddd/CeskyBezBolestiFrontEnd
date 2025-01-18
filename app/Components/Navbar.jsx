@@ -30,7 +30,8 @@ function Navbar() {
     if (userResponse.ok) {
       const userObject = await userResponse.json()
       setUsername(userObject.Username)
-      user.username = userObject.Username
+      user.setUserData(userObject.Username, null)
+      // user.username = userObject.Username
     }
   }
 

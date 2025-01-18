@@ -6,7 +6,7 @@ import { Urls } from '@/app/Contexts/UrlsExport';
 
 
 import Link from "next/link"
-
+ 
 const url = Urls.server
 const path = Urls.register
 
@@ -117,7 +117,7 @@ export default function Register() {
         <>
             <div id="content">
                 <div id="frame">
-                    <div id="image"></div>
+                    {/* <div id="image"></div> */}
                     <div id="form">
                         <h1>Registrace</h1>
                         <form>

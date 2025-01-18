@@ -23,5 +23,6 @@ export const Urls = {
     "getreportdetails":"/api/Mix/getreport",
     "resetpassword":"/api/Auth/resetpassword",
     "updatepassword":"/api/Auth/updatepassword",
-    "removequestion":"/api/Questions/removequestion"
+    "removequestion":"/api/Questions/removequestion",
+    "changepassword":"/api/Auth/changepassword",
 }

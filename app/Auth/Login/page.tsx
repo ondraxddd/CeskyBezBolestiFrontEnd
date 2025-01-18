@@ -113,7 +113,7 @@ export default function Login() {
         <>
             <div id="content">
                 <div id="frame">
-                    <div id="image"></div>
+                    {/* <div id="image"></div> */}
                     <div id="form">
                         <h1>Přihlášení</h1>
                         <form>

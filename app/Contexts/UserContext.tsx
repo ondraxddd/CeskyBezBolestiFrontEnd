@@ -19,7 +19,7 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const value: UserContextProps = {
     username: userData.username,
     fullname: userData.fullname,
-    setUserData: (username, fullname) => setUserData({ username, fullname }),
+    setUserData: (username, fullname) => {setUserData({...{ username, fullname }}); console.log("Updatuju kontexttt")},
   };
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
