@@ -2,12 +2,13 @@
 
 import { useEffect } from "react"
 import ClickerMix from "../Components/ClickerMix"
+import "./style.css"
 
 export default function Ctyrletymix() {
 
     // useEffect(()=>{console.log("Check if user is logges in")}, [])
 
-    if (false) { // make a rule to display error if user aint logged in
+    if (false) { //TODO display error if user aint logged in
         return (
             <>
 
@@ -17,9 +18,9 @@ export default function Ctyrletymix() {
     else {
         return (
             <>
-             <a href="/mixesoverview">Výsledky ostatních pokusů</a>
-                <ClickerMix></ClickerMix>
-            </>
+             <ClickerMix></ClickerMix>
+             {/* <a href="/mixesoverview" id="othertestsresults">Výsledky ostatních pokusů</a> */}
+             </>
         )
     }
 }

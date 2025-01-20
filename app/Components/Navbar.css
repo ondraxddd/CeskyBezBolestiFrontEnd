@@ -4,7 +4,6 @@ nav {
     margin-top: 15px;
     height: 1.5rem;
     z-index: 999;
-    position: absolute;
     inset: 0;
 }
 

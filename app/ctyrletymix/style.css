@@ -1,0 +1,15 @@
+#ctyrletymixscreen {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column; /* Přidá vertikální zarovnání */
+    align-items: center;
+    justify-content: center;
+}
+
+#othertestsresults{
+    color: #FFA115;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 1rem;
+}

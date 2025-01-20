@@ -23,7 +23,7 @@ function UsernameWidget({ username }: Props) {
         </DropdownTrigger>
         <DropdownMenu aria-label="Static Actions">
           <DropdownItem className="dropdownItemNextUI" href="/Statistics"><p>Statistiky</p></DropdownItem> 
-          <DropdownItem className="dropdownItemNextUI" href="https://youtube.com"><p>Nastavení</p></DropdownItem>
+          <DropdownItem className="dropdownItemNextUI" href="/settings"><p>Nastavení</p></DropdownItem>
           <DropdownItem className="dropdownItemNextUI" href="/" onClick={()=>{
             fetch(Urls.server + Urls.logout,
               {

@@ -1,0 +1,12 @@
+#mixReportDiv{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+#mixReportFreshContent{
+    width: 80vw;
+}

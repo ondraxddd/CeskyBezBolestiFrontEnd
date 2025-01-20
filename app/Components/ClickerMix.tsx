@@ -135,13 +135,14 @@ export default function ClickerMixComponent() {
             <div id="ClickerMixComplete">
                 <h2>Došel si až na konec!</h2>
                 <h1>Tvoje úspěšnost: {correctAnswersCount}/{answers.length}</h1>
-                <a href="/mixesoverview">Výsledky ostatních pokusů</a>
+                <a href="/mixesoverview">Výsledky ostatních testů</a>
                 <MixResultFresh answers={answers}></MixResultFresh>
             </div>
         )
     }
     else {
         return (
+            <div id="ctyrletymixscreen">
             <div id="clicker" style={backgroundStyle}>
                 <h1 id="clickerQuestion">{questions[0]?.QuestionText}</h1>
 
@@ -151,7 +152,9 @@ export default function ClickerMixComponent() {
                 </div>
 
                 <p>{qCounter}/{questionCount}</p>
-                <button id="helpClicker">Nápověda</button>
+                {/* <button id="helpClicker">Nápověda</button> */}
+                <a href="/mixesoverview" id="othertestsresults">Výsledky ostatních pokusů</a>
+            </div>
             </div>
         )
     }

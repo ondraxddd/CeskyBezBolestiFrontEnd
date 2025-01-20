@@ -2,6 +2,7 @@
 import '../Components/ComponentStyles/MixReport.css'
 import { useEffect, useState } from "react"
 import { Urls } from "../Contexts/UrlsExport"
+import "./style.css"
 
 interface allMixesReport {
     reports: Array<oneMixReport> | null

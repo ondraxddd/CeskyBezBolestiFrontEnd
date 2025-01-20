@@ -12,18 +12,18 @@ function UsernameWidget({ answers }: Props) {
                 <p>Vaše Odpověď</p>
                 <p>Správná Odpověď</p>
             </div>
-            <nav id='mixResultFreshContent'>
+            <div id='mixResultFreshContent'>
                 {answers.map((answer) => {
                     return (
                         <div key={answer.QuestionId} id='answerRow'
-                         style={!answer.isCorrect ? {backgroundColor:"#ffcccc"} : {}}>
+                            style={!answer.isCorrect ? { backgroundColor: "#ffcccc" } : {}}>
                             <p>{answer.question}</p>
                             <p>{answer.userAnswer}</p>
                             <p>{answer.correctAnswer}</p>
                         </div>
                     )
                 })}
-            </nav>
+            </div>
         </div>
     );
 };
