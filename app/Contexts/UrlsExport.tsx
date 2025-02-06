@@ -25,4 +25,6 @@ export const Urls = {
     "updatepassword":"/api/Auth/updatepassword",
     "removequestion":"/api/Questions/removequestion",
     "changepassword":"/api/Auth/changepassword",
+    "askTomas":"/api/TomasUcitel/askTomas",
+    "askRizzler":"/api/TomasUcitel/askRizzler",
 }
