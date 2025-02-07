@@ -48,7 +48,7 @@ export default function AiUcitel() {
             return
         }
 
-        callAiApi(input.value)
+        callAiApi(input.value.replaceAll("\"","'"))
 
         if (input.value.trim() !== '') {
             const userMessage = document.createElement('div');
