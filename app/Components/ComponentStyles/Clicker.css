@@ -43,12 +43,15 @@
     font-weight: bold;
     padding-left: 3em;
     padding-right: 3em;
+    color:black
 }
 
 #answerBtn:hover{
     background-color: #e9e9ed;
     cursor: pointer;
 }
+
+#answerBtn
 
 #helpClicker{
     color: #FFA115;

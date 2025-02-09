@@ -101,7 +101,7 @@ export default function AiUcitel() {
     return (
         <div id="aiChatPage">
 
-            <h1 id="aiTeacherName">Ai Učitel - Rizzler</h1>
+            <h1 id="aiTeacherName">Ai Učitel - {idModelSelected == 0 ? "Tomáš" : "Rizzler"}</h1>
 
             <div className="chat-container">
                 <div className="chat-box">

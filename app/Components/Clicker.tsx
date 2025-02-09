@@ -114,7 +114,7 @@ else {
                 <button onClick={(event) => handleAnswer(event.target as HTMLButtonElement)} id="answerBtn">{randomNumber == 1 ? questions[0]?.FalseAnswer : questions[0]?.CorrectAnswer}</button>
             </div>
 
-            <button id="helpClicker">Nápověda</button>
+            {/* <button id="helpClicker">Nápověda</button> */}
         </div>
     )
 }

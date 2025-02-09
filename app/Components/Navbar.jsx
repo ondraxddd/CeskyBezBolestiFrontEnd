@@ -79,6 +79,7 @@ function Navbar() {
         <Link href="https://youtube.com">O nás</Link>
         <Link href="https://youtube.com">FaQ</Link>
         <Link href="https://youtube.com">Cena</Link>
+        <Link href="/aiucitel">Ai Učitel</Link>
         <Link href="/">Home</Link>
       </div>
       <div id="navRight">
