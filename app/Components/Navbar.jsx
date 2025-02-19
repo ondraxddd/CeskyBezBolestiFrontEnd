@@ -1,99 +1,60 @@
-'use client'
-import { useContext, useEffect } from 'react';
-import './Navbar.css'; // Pokud máte oddělený CSS soubor pro navigační lištu
+'use client';
+import { useContext, useEffect, useState } from 'react';
+import './Navbar.css';
 import Link from 'next/link';
 import { UserContext } from '../Contexts/UserContext';
-import { useState } from 'react';
-import { getCookie } from '../GeneralFunctions';
 import { Urls } from '../Contexts/UrlsExport';
 import UsernameWidget from './UsernameWidget';
-import {  Dropdown,  DropdownTrigger,  DropdownMenu,  DropdownSection,  DropdownItem} from "@nextui-org/dropdown";
 import { Button } from '@nextui-org/button';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 function Navbar() {
-  const [username, setUsername] = useState("Přihlásit se")
-  const user = useContext(UserContext)
-  const [elapsedTime, setElapsedTime] = useState(0);
+  const [username, setUsername] = useState('Přihlásit se');
+  const user = useContext(UserContext);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   async function getUsername() {
-
-    setUsername("Logged in")
-    const userResponse = await fetch(Urls.server + Urls.getuser,
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        credentials: "include",
-      })
+    const userResponse = await fetch(Urls.server + Urls.getuser, {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+    });
 
     if (userResponse.ok) {
-      const userObject = await userResponse.json()
-      setUsername(userObject.Username)
-      user.setUserData(userObject.Username, null)
-      // user.username = userObject.Username
+      const userObject = await userResponse.json();
+      setUsername(userObject.Username);
+      user.setUserData(userObject.Username, null);
     }
   }
 
-  useEffect(() => { getUsername() }, [])
-
-
-
-
-  // save time spent
-  const [timeDifference, setTimeDifference] = useState(10);
-
   useEffect(() => {
-    // Zaznamenání času otevření stránky
-    const openingTime = new Date().getTime();
-
-    // Funkce pro výpočet rozdílu času při odchodu ze stránky
-    const handleBeforeUnload = async () => {
-      const currentTime = new Date().getTime();
-      const differenceInMinutes = Math.round((((currentTime - openingTime) % 86400000) % 3600000) / 60000);
-      //const differenceInMinutes = currentTime - openingTime
-      setTimeDifference(differenceInMinutes);
-      console.log("Time spent: ", differenceInMinutes)
-      //if(timeDifference < 2) return
-      await fetch(Urls.server + Urls.savesesiontime, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        credentials: "include",
-        body: JSON.stringify({ SesionMinutes: differenceInMinutes }),
-      })
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-
-    // Cleanup funkce pro odebrání zachytávání události před vykreslením komponenty
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-    };
-  }, []); // Efekt se spustí pouze při prvotním vykreslení komponenty
+    getUsername();
+  }, []);
 
   return (
     <nav>
-      <div id="navLeft">
-        <Link href="https://youtube.com">O nás</Link>
-        <Link href="https://youtube.com">FaQ</Link>
-        <Link href="https://youtube.com">Cena</Link>
-        <Link href="/aiucitel">Ai Učitel</Link>
-        <Link href="/">Home</Link>
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
+      </div>
+      <div id="navLeft" className={menuOpen ? 'open' : ''}>
+        <button className="close-menu" onClick={() => setMenuOpen(false)}>
+          <AiOutlineClose size={30} />
+        </button>
+        <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link href="/aiucitel" onClick={() => setMenuOpen(false)}>Ai Učitel</Link>
+        <Link href="https://youtube.com" onClick={() => setMenuOpen(false)}>O nás</Link>
+        <Link href="https://youtube.com" onClick={() => setMenuOpen(false)}>FaQ</Link>
+        <Link href="https://youtube.com" onClick={() => setMenuOpen(false)}>Cena</Link>
       </div>
       <div id="navRight">
-        {
-          user.username == null ?
+        {user.username == null ? (
           <Link href="/Auth/Login">Přihlášení</Link>
-          : <UsernameWidget username={user.username}></UsernameWidget>
-        }
-        {/* <Link href="/Auth/Login">{user.username == null ? "Přihlášení" : user.username}</Link>
-        <UsernameWidget username={user.username}></UsernameWidget> */}
-        {/* <Link href="/Auth/Login">{username}</Link> */}
+        ) : (
+          <UsernameWidget username={user.username} />
+        )}
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;

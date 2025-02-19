@@ -2,45 +2,79 @@ nav {
     font-family: 'Lexend', sans-serif;
     font-weight: 500;
     margin-top: 15px;
-    height: 1.5rem;
+    height: auto;
     z-index: 999;
     inset: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
 nav a {
-    margin-left: 25px;
     font-size: 1.25rem;
     text-decoration: none;
     color: #343434;
+    margin: 10px;
 }
 
 #navLeft {
-    float: left;
+    display: flex;
 }
 
 #navRight {
-    float: right;
     margin-right: 25px;
 }
 
 #navRight a {
     color: #FFA115;
     font-weight: bold;
-    background-color: transparent;
     font-size: 1.5rem;
     border: none;
     cursor: pointer;
 }
 
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
 
-@media only screen and (min-width: 401px) and (max-width: 900px) {
-
-    nav a {
-        font-size: 4vw;
-        margin-left: 2vw;
+.close-menu{
+    display: none;
+    cursor: pointer;
+    background-color: none;
     }
 
-    #navRight a{
-        font-size: 4vw;
+
+@media only screen and (max-width: 900px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .close-menu{
+        display: block;
+    }
+
+    #navLeft {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: #b5b5bf;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s ease;
+    }
+
+    #navLeft.open {
+        left: 0;
+    }
+
+    #navLeft a {
+        margin: 20px 0;
+        font-size: 1.5rem;
     }
 }
