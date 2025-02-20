@@ -66,9 +66,9 @@ export default function Statistics() {
                 </div>
                 
                 <div className="break"></div>
-                <div id="statsRow">
+                {/* <div id="statsRow">
                     <ShouldRemember data={userStats?.ShouldRemember ?? [{}]}></ShouldRemember>
-                </div>
+                </div> */}
             </div>
         </div>
     )

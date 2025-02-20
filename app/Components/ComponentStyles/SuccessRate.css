@@ -6,15 +6,32 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    word-break: break-all;
 }
 
 #successh1{
     color: #FFA115;
-    font-size: 4vw;
+    font-size: 5vw;
     margin: 0;
 }
 #successh2{
     color: black;
-    font-size: 1vw;
+    font-size: 1.5vw;
     margin: 0
+}
+
+@media only screen and (max-width: 900px){
+
+    #successCard{
+        width: 70vw;
+        height: 30vh;
+    }
+
+    #successh1{
+        font-size: 10vh;
+    }
+
+    #successh2{
+        font-size: 5vw;
+    }
 }

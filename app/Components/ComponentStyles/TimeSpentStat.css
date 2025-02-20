@@ -9,7 +9,7 @@
 }
 
 #timeSpenth3{
-    font-size: 1vw;
+    font-size: 1.5vw;
     margin: 0
 }
 
@@ -25,4 +25,25 @@
     margin: 0;
     line-height: 80%;
     margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+@media only screen and (max-width: 900px){
+    #timeSpentCard{
+        width: 70vw;
+        height: 30vh;
+    }
+
+    #timeSpenth1{
+        font-size: 10vw;
+    }
+
+    #timeSpenth3{
+        font-size: 5vw;
+    }
+
+    #timeSpenth1{
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
 }

@@ -11,8 +11,7 @@ export default function TimeSpentStat({ minutes }: Props) {
         <div id="timeSpentCard">
             <h3 id="timeSpenth3">Průměrně s námi strávíš</h3>
             <h1 id="timeSpenth1">{minutes}</h1>
-            <h2 id="timeSpenth2">minut</h2>
-            <h3>denně</h3>
+            <h3 id="timeSpenth3">minut denně</h3>
         </div>
     )
 }
