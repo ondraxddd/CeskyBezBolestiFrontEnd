@@ -61,8 +61,13 @@ li{
 }
 
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 900px){
     .topicCard{
         width: 90vw;
+        background-color: red;
+    }
+
+    ul li{
+        font-size: 3vw;
     }
 }

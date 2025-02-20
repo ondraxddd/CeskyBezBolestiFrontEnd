@@ -1,5 +1,5 @@
 .topicCard{
-    width: 25vw;
+    /* width: 25vw; */
     height: 70vh;
     background-color: #e0e0ec;
     border: #FFA115 4px solid;
@@ -61,6 +61,6 @@
 @media only screen and (min-width: 401px) and (max-width: 900px){
     
     .topicCard ul li{
-        font-size: 2vw;
+        font-size: 3vw;
     }
 }

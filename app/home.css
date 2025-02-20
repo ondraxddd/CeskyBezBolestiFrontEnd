@@ -170,7 +170,7 @@
         text-decoration: none;
         color: #343434;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
 
     /* NAV */
     #navLeft {
