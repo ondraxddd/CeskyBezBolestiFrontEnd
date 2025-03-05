@@ -18,11 +18,6 @@ body{
     display: flex;
 }
 
-/* #image{
-    width: 70%;
-    height: 100%;
-} */
-
 #form{
     /* width: 30%; -- POKUD BYCH CHTĚL OBRÁZEK NA POZADÍ*/ 
     width: 100%;
@@ -60,7 +55,8 @@ body{
     color: black;
     font-weight: bold;
     cursor: pointer;
-}
+    margin-top: 4%;
+    }
 
 a{
     cursor: pointer;
@@ -84,9 +80,30 @@ h3{
 }
 
 
-@media only screen and (max-width: 850px){
-    nav{
-        visibility: hidden;
+@media only screen and (max-width: 900px){
+
+    #frame{
+        width: 80vw;
+    }
+
+    #form h1{
+        font-size: 7vw;
+        margin: 1vh;
+    }
+
+    #form input{
+        width: 50vw;
+    }
+
+    #form a{
+        font-size: 2vw;
+        text-decoration: underline;
+        margin: .4vw;
+    }
+
+    #btn{
+        width: 50%;
+        margin-top: 2%;
     }
 
     #image{

@@ -122,7 +122,7 @@ export default function Register() {
                         <h1>Registrace</h1>
                         <form>
                             <input type="text" className="credentials" onChange={(e)=>{setFirstName(e.currentTarget.value)}} style={{border :borderColorFirstName}} placeholder="Jméno" />
-                            <input type="text" className="credentials" onChange={(e)=>{setLastName(e.currentTarget.value)}} style={{border :borderColorLastName}} placeholder="Příjmení" /><br />
+                            <input type="text" className="credentials secondcred" onChange={(e)=>{setLastName(e.currentTarget.value)}} style={{border :borderColorLastName}} placeholder="Příjmení" /><br />
                             <input type="text" id='username' onChange={(e)=>{setNickname(e.currentTarget.value)}} style={{border :borderColorNickname}} placeholder="Přezdívka" /><br />
                             <input type="email" placeholder="Váš@email.cz" onChange={(e)=>{setEmail(e.currentTarget.value)}} style={{border :borderColorEmail}} /><br />
                             <input type="password" placeholder="Heslo" onChange={(e)=>{setPassword(e.currentTarget.value)}} style={{border :borderColorPassword}} /><br />
@@ -131,6 +131,7 @@ export default function Register() {
                         <br />
                         <p style={{fontSize: 16, color:"Red"}}>{warning}</p>
                         <button id="btn" onClick={()=>handleRegistrationButton()}>Zaregistrovat se</button>
+                        <a href="/Auth/Login">Už máte účet? Přihlaste se.</a>
                     </div>
                 </div>
             </div>

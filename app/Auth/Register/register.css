@@ -48,7 +48,11 @@ body{
 }
 
 #form .credentials{
-    width: 8.5vw;
+    width: 8vw;
+}
+
+#form .secondcred{
+    margin-left: 1vw;
 }
 
 #btn{
@@ -81,9 +85,43 @@ h3{
 }
 
 
-@media only screen and (max-width: 850px){
-    nav{
-        visibility: hidden;
+@media only screen and (max-width: 900px){
+
+    #form .credentials{
+        width: 24vw;
+    }
+
+    #form .secondcred{
+        margin-left: 1vw;
+    }
+
+    #frame{
+        width: 80vw;
+    }
+
+    #form h1{
+        font-size: 7vw;
+        margin: 1vh;
+    }
+
+    #form input{
+        width: 50vw;
+    }
+
+    #form a{
+        font-size: 2vw;
+        text-decoration: underline;
+        margin: .4vw;
+    }
+
+    #btn{
+        width: 50%;
+        margin-top: 2%;
+    }
+
+    #form a{
+        color: black;
+        margin-top: 1vh;
     }
 
     #image{
