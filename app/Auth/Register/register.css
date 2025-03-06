@@ -119,10 +119,15 @@ h3{
         margin-top: 2%;
     }
 
+    #btn a{
+        font-size: 10rem;
+    }
+
     #form a{
         color: black;
         margin-top: 1vh;
     }
+    
 
     #image{
         visibility: hidden;

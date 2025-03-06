@@ -170,7 +170,7 @@
         text-decoration: none;
         color: #343434;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
 
     /* hero page */
     #mainText {
@@ -246,21 +246,16 @@
     }
 
     #prijMix p {
-        font-size: 5vw;
+        font-size: 3vw;
         margin-top: 1vh;
     }
 
     #prijMix button {
         width: 40vw;
-        height: 50vh;
-        font-size: 5vw;
+        height: 10vh;
+        font-size: 4vw;
     }
 
-}
-
-
-@media only screen and (min-width: 401px) and (max-width: 900px){
-    
     #mainImage {
         display: none;
         width: 0;
@@ -280,14 +275,38 @@
 
     #mainText button{
         height: fit-content;
-        width: 20vw;
+        width: 35vw;
+        height: 6vh;
     }
 
     #mainText button a{
-        font-size: 2vw;
+        font-size: 4vw;
     }
 
     #prijMix h1{
-        font-size: 8vw;
+        font-size: 7vw;
+    }
+
+}
+
+
+/* tablet */
+@media only screen and (min-width: 901px) and (max-width: 1180px){
+
+    #mainImage{
+        background-color: red;
+        display: none;
+    }
+
+    #mainText{
+        width: 100%;
+    }
+
+    #mainText h1{
+        font-size: 10vw;
+    }
+   
+    #mainText p{
+        font-size: 3.5vw;
     }
 }
