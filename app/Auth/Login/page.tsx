@@ -1,6 +1,6 @@
 'use client'
 import { useRouter } from 'next/navigation';
-import { use, useContext, useState } from 'react';
+import { use, useContext, useRef, useState } from 'react';
 import './login.css'
 import { Urls } from '@/app/Contexts/UrlsExport';
 
@@ -16,7 +16,7 @@ const userPath = "/getuser"
 
 export default function Login() {
 
-    const existsWarning = document.getElementById("warning");
+    const existsWarning = useRef<HTMLHeadingElement>(null);
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [borderColor, setBorderColor] = useState('');
@@ -48,9 +48,9 @@ export default function Login() {
             }) 
             // wrong credentials
             if (!res.ok) {
-                existsWarning!.style.display = "Block"
-                existsWarning!.innerHTML = "Špatné přihlašovací údaje."
-                existsWarning!.style.color = "Red"
+                existsWarning.current!.style.display = "Block"
+                existsWarning.current!.innerHTML = "Špatné přihlašovací údaje."
+                existsWarning.current!.style.color = "Red"
                 return;
             }
 
@@ -63,9 +63,9 @@ export default function Login() {
                 credentials: "include",
             })
             if(!userResponse.ok){
-                existsWarning!.style.display = "Block"
-                existsWarning!.innerHTML = "Špatné přihlašovací údaje."
-                existsWarning!.style.color = "Red"
+                existsWarning.current!.style.display = "Block"
+                existsWarning.current!.innerHTML = "Špatné přihlašovací údaje."
+                existsWarning.current!.style.color = "Red"
                 return;
             }
             const userData = await userResponse.json()
@@ -76,9 +76,9 @@ export default function Login() {
             }  
         // our server is down
         catch {
-            existsWarning!.style.display = "Block"
-            existsWarning!.innerHTML = "Stala se chyba na naší straně, zkuste to znovu později. Děkujeme."
-            existsWarning!.style.color = "Red"
+            existsWarning.current!.style.display = "Block"
+            existsWarning.current!.innerHTML = "Stala se chyba na naší straně, zkuste to znovu později. Děkujeme."
+            existsWarning.current!.style.color = "Red"
         }
 
     }
@@ -120,7 +120,7 @@ export default function Login() {
                             <input type="email" onChange={e => { setEmail(e.currentTarget.value) }} style={{ border: borderColor }} placeholder="Váš@email.cz" /> <br />
                             <input type="password" onChange={e => { setPassword(e.currentTarget.value) }} style={{ border: borderColorPassword }} placeholder="Heslo" /><br />
                         </form>
-                        <h3 id='warning'>Někde se stala chyba. Zkuste to později. Děkujeme.</h3>
+                        <h3 ref={existsWarning} id='warning'>Někde se stala chyba. Zkuste to později. Děkujeme.</h3>
                         <button id="btn" onClick={handleButtonClick}>Přihlásit se</button>
                         <Link href="/Auth/Register">Ještě nemáte učet? Zaregistrujte se.</Link>
                         <Link href="/requestpasswordreset">Zapomněl jsem heslo</Link>

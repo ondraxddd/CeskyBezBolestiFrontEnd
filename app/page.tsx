@@ -32,13 +32,13 @@ export interface Subject {
     PaidQuestionsCount: number;
 }
 
-export const removeDiacriticsAndSpaces = (text: string): string => {
-    // Normalizace textu pro odstranění diakritiky
-    text = text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    text = text.replace("/", "")
-    // Odstranění mezer a převod na malá písmena
-    return text.replace(/\s+/g, '').toLowerCase();
-};
+// export const removeDiacriticsAndSpaces = (text: string): string => {
+//     // Normalizace textu pro odstranění diakritiky
+//     text = text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+//     text = text.replace("/", "")
+//     // Odstranění mezer a převod na malá písmena
+//     return text.replace(/\s+/g, '').toLowerCase();
+// };
 
 
 export default function Home() {

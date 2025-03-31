@@ -62,7 +62,7 @@ export default function Home() {
     }
 
 
-    const DownloadQuestions = (subCatgIdTemp : Number) =>{
+    const DownloadQuestions = (subCatgIdTemp : number) =>{
         console.log("Selected sub catg id: ", subCatgIdTemp)
         const requestData = {
             "subCatgId": subCatgIdTemp
@@ -126,7 +126,7 @@ export default function Home() {
             },
             credentials: "include",
         })
-        DownloadQuestions(selectedSubCategoryId)
+        DownloadQuestions(selectedSubCategoryId ?? 0)
     }
 
     const findSubjectById = (id: number) => {
@@ -189,8 +189,8 @@ export default function Home() {
                 <option value={0}>-- Vyber Otázku -- </option>
                 {selectedCategory && selectedCategory.SubCatgs && selectedSubCategoryId  ? (
                     allQuestions.map((question: questionDTO) => (
-                        <option key={question.questionId} value={question.questionId}>
-                            {question.questionText}
+                        <option key={question.QuestionId} value={question.QuestionId}>
+                            {question.QuestionText}
                         </option>
                     ))
                 ) : (

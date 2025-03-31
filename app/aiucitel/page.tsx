@@ -105,7 +105,7 @@ export default function AiUcitel() {
 
             <div className="chat-container">
                 <div className="chat-box">
-                    <div className="message received">Ahoj, já jsem tvůj digitální učitel. Můžeš se mě třeba zeptat, abych ti vysvětlil látku "Psaní velkých písmen" nebo konkrétní otázku, třeba "Proč ve spojení "být doma" píše tvrdé Y.</div>
+                    <div className="message received">Ahoj, já jsem tvůj digitální učitel. Můžeš se mě třeba zeptat, abych ti vysvětlil látku &quot Psaní velkých písmen &quot nebo konkrétní otázku, třeba &quot Proč ve spojení &quot být doma &quot píše tvrdé Y.</div>
                     <div className="message received">Jsem ale jenom umělá inteligence, a tak můžu dělat spoustu chyb. Proto všechno, co ti řeknu, si raději prověřuj.</div>
                 </div>
                 <div className="input-box">
