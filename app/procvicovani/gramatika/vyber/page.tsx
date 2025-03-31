@@ -1,6 +1,5 @@
 import './vyber.css'
 import Image from 'next/image';
-import Nigga from "../../../../public/nigga.jpg"
 import Link from 'next/link';
 import { Urls } from '@/app/Contexts/UrlsExport';
 
