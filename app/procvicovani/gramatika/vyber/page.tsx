@@ -32,27 +32,21 @@ export default async function Select() {
             <div id="cards">
 
                 <Link href="/procvicovani/gramatika/IY" className="card">
-                    <Image src={Nigga} alt="" />
                     <h2>Psaní I/Y</h2>
                 </Link>
                 <Link href="" className="card">
-                    <Image src={Nigga} alt="" />
                     <h2>Velká písmena</h2>
                 </Link>
                 <Link href="" className="card">
-                    <Image src={Nigga} alt="" />
                     <h2>Číslovky</h2>
                 </Link>
                 <Link href="" className="card">
-                    <Image src={Nigga} alt="" />
                     <h2>Stavba slova</h2>
                 </Link>
                 <Link href="" className="card">
-                    <Image src={Nigga} alt="" />
                     <h2>Psaní ě/je</h2>
                 </Link>
                 <Link href="" className="card">
-                    <Image src={Nigga} alt="" />
                     <h2>Psaní ú/ů</h2>
                 </Link>
 
