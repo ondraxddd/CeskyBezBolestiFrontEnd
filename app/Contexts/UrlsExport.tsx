@@ -1,6 +1,6 @@
 export const Urls = {
     "serverDev":"https://localhost:7184",
-    "server":"http://jarda.site:8003",
+    "server":"https://kuca.jarda.site",
     "getuser":"/getuser",
     "login":"/api/Auth/login",
     "logout":"/api/Auth/logout",
