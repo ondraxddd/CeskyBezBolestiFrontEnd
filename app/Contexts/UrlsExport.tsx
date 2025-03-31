@@ -1,5 +1,6 @@
 export const Urls = {
-    server:"https://localhost:7184",
+    serverDev:"https://localhost:7184",
+    server:"http://jarda.site:8003",
     "getuser":"/getuser",
     "login":"/api/Auth/login",
     "logout":"/api/Auth/logout",
