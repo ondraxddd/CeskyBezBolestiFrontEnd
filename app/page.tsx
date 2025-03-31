@@ -27,7 +27,7 @@ export interface Category {
 export interface Subject {
     Id: number;
     Title: string;
-    Categories: Category[];
+    Categories: Category[]; 
     FreeQuestionsCount: number;
     PaidQuestionsCount: number;
 }
